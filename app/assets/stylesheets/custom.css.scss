@@ -183,3 +183,33 @@ input, textarea, select, .uneditable-input {
     }
   }
 }
+
+.flickr-pagination {
+  text-align: center;
+  padding: 0.3em;
+  cursor: default; }
+  .flickr-pagination a, .flickr-pagination span, .flickr-pagination em {
+    padding: 0.2em 0.5em; }
+  .flickr-pagination .disabled {
+    color: #aaaaaa; }
+  .flickr-pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    color: #ff0084; }
+  .flickr-pagination a {
+    border: 1px solid #dddddd;
+    color: #0063dc;
+    text-decoration: none; }
+    .flickr-pagination a:hover, .flickr-pagination a:focus {
+      border-color: #003366;
+      background: #0063dc;
+      color: white; }
+  .flickr-pagination .page_info {
+    color: #aaaaaa;
+    padding-top: 0.8em; }
+  .flickr-pagination .previous_page, .flickr-pagination .next_page {
+    border-width: 2px; }
+  .flickr-pagination .previous_page {
+    margin-right: 1em; }
+  .flickr-pagination .next_page {
+    margin-left: 1em; }

@@ -45,6 +45,9 @@ describe "User pages" do
         it "should be able to delete another user" do
           expect { click_link('delete') }.to change(User, :count).by(-1)
         end
+        it "should not be able to delete themself" do
+          expect { delete user_path(admin) }.to_not change(User, :count)
+        end
         it { should_not have_link('delete', href: user_path(admin)) }
       end
     end
@@ -140,7 +143,7 @@ describe "User pages" do
         fill_in "Name",             with: new_name
         fill_in "Email",            with: new_email
         fill_in "Password",         with: user.password
-        fill_in "Confirm Password", with: user.password
+        fill_in "Confirmation", with: user.password
         click_button "Save changes"
       end
 
